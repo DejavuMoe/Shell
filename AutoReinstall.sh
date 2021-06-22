@@ -11,10 +11,10 @@ function CopyRight() {
   echo "########################################################"
   echo "#                                                      #"
   echo "#  Auto Reinstall Script                               #"
-  echo "#  Modified by Spoience                                #"
+  echo "#  Modified by DejavuMoe                                #"
   echo "#  Origin: hiCasper                                    #"
   echo "#  Blog: https://blog.hicasper.com/post/135.html       #"
-  echo "#  Repo: https://github.com/Spoience/Shell             #"
+  echo "#  Repo: https://github.com/DejavuMoe/Shell             #"
   echo "#  Last Modified: 2021-05-22                           #"
   echo "#                                                      #"
   echo "#          Supported by MoeClub                        #"
@@ -151,7 +151,7 @@ function Start() {
   if [ -f "/tmp/InstallNET.sh" ]; then
     rm -f /tmp/InstallNET.sh
   fi
-  wget --no-check-certificate -qO /tmp/InstallNET.sh 'https://cdn.jsdelivr.net/gh/Spoience/Shell/InstallNET.sh' && chmod a+x /tmp/InstallNET.sh
+  wget --no-check-certificate -qO /tmp/InstallNET.sh 'https://cdn.jsdelivr.net/gh/DejavuMoe/Shell/InstallNET.sh' && chmod a+x /tmp/InstallNET.sh
 
   CMIRROR=''
   CVMIRROR=''
@@ -164,7 +164,7 @@ function Start() {
     UMIRROR="--mirror http://mirrors.cloud.tencent.com/ubuntu/"
   fi
 
-  sed -i 's#https://github.com/MoeClub/MoeClub.github.io/raw/master/lib/wget_udeb_amd64.tar.gz#https://cdn.jsdelivr.net/gh/Spoience/Shell/wget_udeb_amd64.tar.gz#' /tmp/InstallNET.sh
+  sed -i 's#https://github.com/MoeClub/MoeClub.github.io/raw/master/lib/wget_udeb_amd64.tar.gz#https://cdn.jsdelivr.net/gh/DejavuMoe/Shell/wget_udeb_amd64.tar.gz#' /tmp/InstallNET.sh
   sed -i 's/$1$4BJZaD0A$y1QykUnJ6mXprENfwpseH0/$1$7R4IuxQb$J8gcq7u9K0fNSsDNFEfr90/' /tmp/InstallNET.sh
   sed -i "/18.04/a\        [[ \"\$isDigital\" == \'20.04\' ]] && DIST=\'focal\'\;" /tmp/InstallNET.sh
   sed -i '/force-efi-extra-removable/d' /tmp/InstallNET.sh
